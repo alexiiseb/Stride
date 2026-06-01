@@ -99,7 +99,7 @@ header a:hover{
 }
 .banner .row{
     height: 80vh;
-    background-image: url('/galeria/banner.jpg');
+    background-image: url('galeria/banner.jpg');
     background-size: cover;
     background-position: center;
     color: white;
