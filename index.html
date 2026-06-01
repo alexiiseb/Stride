@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stride</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header class="container-fluid">
+        <div class="container">
+            <div class="row text-center">
+                <h1>Stride</h1>
+                <p>Calidad que se siente en cada paso</p>
+            </div>
+        
+            <nav class="row">
+                <div class="col-lg-2">
+                    <a href="">Iniciar sesión</a>
+                </div>
+                <div class="col-lg-2">
+                    <a href="">Hombre</a>
+                </div>
+                <div class="col-lg-2">
+                    <a href="">Mujer</a>
+                </div>
+                <div class="col-lg-1">
+                    <a href="">Niño</a>
+                </div>
+                <div class="col-lg-2 filtros">
+                    <input type="text" id="buscador" placeholder="Buscar zapatillas...">
+                </div>
+                <div class="col-lg-2">
+                    <select id="filtroMarca">
+                        <option value="todos">Todas las marcas</option>
+                        <option value="adidas">Adidas</option>
+                        <option value="nike">Nike</option>
+                        <option value="puma">Puma</option>
+                    </select>
+                </div>
+                <div class="col-lg-1 carrito-icono" id="abrirCarrito">
+                    🛒 <span id="contador">0</span>
+                </div>
+            </nav>
+            
+        </div>
+    </header>
+
+    <div id="overlay"></div>
+
+    <aside id="carrito" class="carrito">
+        <button id="cerrarCarrito">✖</button>
+        <h2>Mi carrito</h2>
+        <ul id="listaCarrito"></ul>
+        <h3>Total: S/<span id="total">0</span></h3>
+    </aside>
+
+    <section class="container-fluid banner">
+        <div class="row">
+            <h1>Colección 2026</h1>
+            <p>Las mejores zapatillas urbanas y deportivas</p>
+            <button>Comprar ahora</button>
+        </div>
+    </section>
+
+    <section class="container-fluid">
+        <div class="container estanteria">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="producto">
+                        <figure>
+                            <div class="hidden-img">
+                                <img src="/galeria/products/adidas-run-72.png" alt="Adidas Run 72">
+                            </div>
+                            <h3>Adidas Run 72</h3>
+                            <p>Zapatilla de mujer</p>
+                            <p class="precio">259.90</p>
+                            <button class="agregar">Agregar</button>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="producto">
+                        <figure>
+                            <div class="hidden-img">
+                                <img src="/galeria/products/adidas-running-galaxy-7.png" alt="Adidas Running Galaxy 7">
+                            </div>
+                            <h3>Adidas Running Galaxy 7</h3>
+                            <p>Zapatilla de mujer</p>
+                            <p class="precio">199.99</p>
+                            <button class="agregar">Agregar</button>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="producto">
+                        <figure>
+                            <div class="hidden-img">
+                                <img src="/galeria/products/adidas-technochaos-2000.png" alt="Adidas Technochaos 2000">
+                            </div>
+                            <h3>Adidas Technochaos 2000</h3>
+                            <p>Zapatilla de hombre</p>
+                            <p class="precio">299.00</p>
+                            <button class="agregar">Agregar</button>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="producto">
+                        <figure>
+                            <div class="hidden-img">
+                                <img src="/galeria/products/nike-air-jordan.webp" alt="Nike Air Jordan">
+                            </div>
+                            <h3>Nike Air Jordan</h3>
+                            <p>Zapatilla de hombre</p>
+                            <p class="precio">552.70</p>
+                            <button class="agregar">Agregar</button>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="producto">
+                        <figure>
+                            <div class="hidden-img">
+                                <img src="/galeria/products/nike-dunk-retro.jpg" alt="Nike Dunk Retro">
+                            </div>
+                            <h3>Nike Dunk Retro</h3>
+                            <p>Zapatilla deportiva</p>
+                            <p class="precio">289.00</p>
+                            <button class="agregar">Agregar</button>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="producto">
+                        <figure>
+                            <div class="hidden-img">
+                                <img src="/galeria/products/nike-jordan-spizike.png" alt="Nike Jordan Spizike">
+                            </div>
+                            <h3>Nike Jordan Spizike</h3>
+                            <p>Zapatilla deportiva</p>
+                            <p class="precio">329.70</p>
+                            <button class="agregar">Agregar</button>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="producto">
+                        <figure>
+                            <div class="hidden-img">
+                                <img src="/galeria/products/puma-guard.png" alt="Puma Guard">
+                            </div>
+                            <h3>Puma Guard</h3>
+                            <p>Zapatilla de niño</p>
+                            <p class="precio">429.00</p>
+                            <button class="agregar">Agregar</button>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="producto">
+                        <figure>
+                            <div class="hidden-img">
+                                <img src="/galeria/products/puma-h-street.png" alt="Puma H Street">
+                            </div>
+                            <h3>Puma H Street</h3>
+                            <p>Zapatilla deportiva</p>
+                            <p class="precio">379.99</p>
+                            <button class="agregar">Agregar</button>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="producto">
+                        <figure>
+                            <div class="hidden-img">
+                                <img src="/galeria/products/puma-shuffle-downtown.png" alt="Puma Shuffle Downtown">
+                            </div>
+                            <h3>Puma Shuffle Downtown</h3>
+                            <p>Zapatilla de hombre</p>
+                            <p class="precio">229.50</p>
+                            <button class="agregar">Agregar</button>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid promo">
+        <div class="row">
+            <div class="col">
+                <p>Únete al club y recibe 250 puntos de bienvenida</p>
+            </div>
+            <div class="col-lg-3">
+                <button>Regístrate gratis</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h5>Sobre nosotros</h5>
+                    <ul>
+                        <li>Acerca de Stride</li>
+                        <li>Trabaja en nuestro equipo</li>
+                        <li>Prensa</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h5>Obterner ayuda</h5>
+                    <ul>
+                        <li>Estado del pedido</li>
+                        <li>Envío y entrega</li>
+                        <li>Cambios, devoluciones y garantías</li>
+                        <li>Opciones de pago</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h5>Síguenos</h6>
+                    <img src="/galeria/icons/facebook.png" alt="Facebook"><br>
+                    <img src="/galeria/icons/instagram.png" alt="Instagram"><br>
+                    <img src="/galeria/icons/x.png" alt="X (Twitter)"><br>
+                    <img src="/galeria/icons/pinterest.png" alt="Pinterest"><br>
+                    <img src="/galeria/icons/tiktok.png" alt="TikTok"><br>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
